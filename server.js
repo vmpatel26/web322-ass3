@@ -117,7 +117,7 @@ app.post('/posts/add',upload.single("featureImage"),function(req,res) {
             published, 
             featureImage
         }
-        addPost(postData)
+        addPost(post)
         .then((data) => res.json(data))
         .catch((err)=> console.log(err))
     });
