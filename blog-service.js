@@ -48,15 +48,15 @@ const getCategories =() =>{
     })
 };
 
-const addPost = (post) =>{
+const addPost = (postData) =>{
     return new Promise((resolve, reject)=> {
-        if(post!= null){
-            if (post.published == undefined) {
-                post.published = false
+        if(postData!= null){
+            if (postData.published == undefined) {
+                postData.published = false
             } 
-            post.id = posts.length+1;
-            posts.push(post)
-            resolve(post)
+            postData.id = posts.length+1;
+            posts.push(postData)
+            resolve(postData)
         } else {
             reject({msg: '0 data found'})
         }
