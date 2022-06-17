@@ -48,7 +48,7 @@ const getCategories =() =>{
     })
 };
 
-const addPost = (post) =>{
+const addPost = (postData) =>{
     return new Promise((resolve, reject)=> {
         if(post!= null){
             if (post.published == undefined) {
